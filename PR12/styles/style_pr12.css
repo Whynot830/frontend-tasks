@@ -1,0 +1,98 @@
+
+.bucket {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    min-width: 5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+    background-color: #33333320;
+    border-radius: 15px;
+    box-shadow: #00000030 0px 0px 5px 2px;
+}
+
+#value {
+    font-size: 3rem;
+}
+
+.btn {
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    width: 90px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #424242;
+    box-shadow: #00000060 0px 0px 5px 1px;
+    transition: 300ms;
+}
+.btn:hover {
+    background-color: #606060;
+}
+
+.btn:active {
+    background-color: #424242;
+}
+
+.card {
+    box-sizing: border-box;
+    padding: 0.8rem;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #33333320;
+    box-shadow: #00000030 0px 0px 5px 2px;
+}
+
+ul {
+    text-align: center;
+}
+
+.notification {
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    width: max-content;
+    height: 4rem;
+    background-color: #777;
+    border-radius: 1rem;
+    color: white;
+    transition: opacity 300ms;
+}
+
+.container_2 {
+    width: 20rem;
+    height: 20rem;
+    background-color: #777;
+    border-radius: 1rem;
+}
+
+.js-centered-image {
+    width: 30px;
+    height: 30px;
+}
+
+.notif_container {
+    position: absolue;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.closeBtn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: -0.5rem;
+    right: 0;
+    color: #a30000;
+}

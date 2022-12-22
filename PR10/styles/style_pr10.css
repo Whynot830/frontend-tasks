@@ -1,0 +1,247 @@
+.login_wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    min-width: 280px;
+    width: 45vw;
+    aspect-ratio: 5/6;
+    transition: transform 300ms;
+}
+.login_wrapper * {
+    user-select: none;
+    color: #fff;
+}
+.login_wrapper h1 {
+    display: block;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    align-self: start;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.login {
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #33333320;
+    box-shadow: #00000030 0px 0px 5px 2px;
+}
+
+.login form {
+    width: 100%;
+}
+.login form input {
+    margin: 0.5rem 0;
+}
+.email, .password {
+    border: none;
+    box-sizing: border-box;
+    width: 80%;
+    height: 35%;
+    border-radius: 50px;
+    padding: 10px 15px;
+    background-color: #00000030;
+    box-shadow: #00000060 0px 0px 5px 1px;
+}
+.email::placeholder, .password::placeholder {
+    color: rgb(230, 230, 230);
+}
+.email:focus, .password:focus {
+    outline: none;
+}
+
+.login_btn {
+    border: none;
+    margin: 10px;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #424242;
+    box-shadow: #00000060 0px 0px 5px 1px;
+    transition: 300ms;
+}
+.login_btn:hover {
+    background-color: #606060;
+}
+.login_btn:active {
+    background-color: #424242;
+}
+.login_btn, span.pass {
+    cursor: pointer;
+}
+
+.login_btn:disabled {
+    pointer-events: none;
+    filter: contrast(0.4);
+}
+span.captcha {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    grid-column: span 2;
+}
+span.captcha * {
+    cursor: pointer;
+    color: rgb(70,70,70);
+}
+span.pass {
+    grid-column: span 2;
+    color: rgb(70,70,70);
+    transition: color 200ms;
+}
+span.pass:hover {
+    color:rgb(100,100,100);
+}
+span.pass:active {
+    color:rgb(50,50,50);
+}
+
+#check {
+    pointer-events: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: #00000030;
+    appearance: none;
+    transition: 100ms;
+}
+
+
+#check:checked, #check:active {
+    background-color: #424242;
+}
+
+.check_container {
+    width: 1rem;
+    height: 1rem;
+    align-self: center;
+    position: relative;
+}
+
+.checkmark {
+    pointer-events: none;
+    position: absolute;
+    top: 15%;
+    left: 32%;
+    width: 25%;
+    height: 45%;
+    transform: rotate(45deg) scale(0);
+    background-color: transparent;
+    border-bottom: solid white 2px;
+    border-right: solid white 2px; 
+    transition: 100ms cubic-bezier(.18,.29,.69,1.5);
+}
+#check:checked~.checkmark {
+    transform: rotate(45deg) scale(1);
+}
+
+.captcha_window {
+    z-index: 5;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    background-color: #424242;
+    width: 100%;
+    height: 54%;
+    border-radius: 1.5rem;
+    transform: scale(0);
+    transition: 200ms;
+}
+
+#captcha_text {
+    margin: 0.5rem;
+}
+
+.captcha_input {
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    width: 70%;
+    height: 2rem;
+    border-radius: 50px;
+    padding: 10px 15px;
+    background-color: #00000030;
+    box-shadow: #00000060 0px 0px 5px 1px;
+}
+
+.submit_captcha {
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #424242;
+    box-shadow: #00000060 0px 0px 5px 1px;
+    transition: 300ms;
+}
+
+.submit_captcha:hover {
+    background-color: #606060;
+}
+.submit_captcha:active {
+    background-color: #424242;
+}
+
+.accumulator {
+    text-align: center;
+    padding: 0.5rem 2rem 0rem 2rem;
+    height: 5rem;
+    background-color: #33333320;
+    border-radius: 15px;
+    box-shadow: #00000030 0px 0px 5px 2px;
+}
+
+#value {
+    font-size: 3rem;
+}
+
+.add_btn {
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #424242;
+    box-shadow: #00000060 0px 0px 5px 1px;
+    transition: 300ms;
+}
+.add_btn:hover {
+    background-color: #606060;
+}
+
+.add_btn:active {
+    background-color: #424242;
+}
+
+.card {
+    box-sizing: border-box;
+    padding: 0.8rem;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #33333320;
+    box-shadow: #00000030 0px 0px 5px 2px;
+}

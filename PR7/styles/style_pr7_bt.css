@@ -1,0 +1,156 @@
+.button_wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
+}
+.button_wrapper * {
+    user-select: none;
+}
+
+.button_t,
+.button_y,
+.button_i,
+.button_s,
+.button_f {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.button_t,
+.button_y,
+.button_i,
+.button_s,
+.button_f {
+    transition: filter 100ms;
+}
+
+.button_t:active,
+.button_y:active,
+.button_i:active,
+.button_s:active,
+.button_f:active {
+    filter: brightness(80%);
+}
+
+.button_t::after,
+.button_y::after,
+.button_i::after,
+.button_s::after,
+.button_f::after {
+    pointer-events: none;
+} 
+
+
+.button_wrapper img {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    width: 60%;
+    transition: filter 500ms, transform 500ms;
+}
+
+
+.button_f:hover img {
+    filter: invert(80%);
+}
+.button_f::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(100, 76, 255),#000080,#000) ;
+    transition: 500ms;
+}
+.button_f:hover:after {
+    top: 0;
+}
+
+.button_y:hover img {
+    filter: invert(100%);
+}
+.button_y::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(red,rgb(255, 230, 0));
+    transform: rotate(45deg);
+    transition: width 200ms;
+}
+.button_y:hover::after {
+    width: 100%;
+}
+
+.button_i:hover img {
+    filter: invert(90%);
+}
+.button_i::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(rgb(255, 94, 0),rgb(166, 0, 255));
+    bottom: -150%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+    transition: 500ms;
+}
+.button_i:hover::after {
+    bottom: 0;
+}
+
+.button_t:hover img {
+    filter: invert(100%);
+}
+.button_t::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(#95daff,#27b3ff,#085781);
+    width: 0;
+    height: 0;
+    border-radius: inherit;
+    transition: width 500ms, height 500ms;
+}
+.button_t:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.button_s:hover img {
+    filter: invert(100%);
+}
+.button_s::after,
+.button_s::before {
+    width: 100%;
+    height: 50%;
+    content: '';
+    position: absolute;
+    background: linear-gradient(#00ff00,#00b700,#00ff00);
+    transition: 500ms;
+}
+.button_s::after {
+    bottom: -100%;
+}
+.button_s::before {
+    top: -100%;
+}
+.button_s:hover::after {
+    bottom:0;
+}
+.button_s:hover::before {
+    top: 0;
+}

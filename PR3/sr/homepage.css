@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  background: #012535;
+}
+
+.body_frame1 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: right;
+
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 50px;
+  left: 0px;
+  top: 0px;
+  margin: 0px;
+  background: #000;
+  border-radius: 0px 0px 50px 50px;
+  z-index: 2;
+}
+
+#logo_image {
+  float: right;
+  min-width: 621px;
+  width: 621px;
+  height: 567px;
+  margin-top: 0;
+  margin-right: 0;
+  background-image: url("/img/inTune.png");
+  background-repeat: no-repeat;
+  background-size: 350px 400px;
+  background-position-x: 75%;
+  background-position-y: 25%;
+  box-shadow: inset 40px 25px 40px rgba(5, 204, 211, 1);
+  border-radius: 0px 0px 0px 500px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#text {
+  flex-basis: 200px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: block;
+  font-size: xx-large;
+  font-style: italic;
+  min-width: 200px;
+}
+
+.body_frame2 {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  left: 0;
+  padding-top: 100px;
+  margin-bottom: 0px;
+  margin-top: -50px;
+  margin-bottom: -100px;
+  padding-bottom: 100px;
+  background: linear-gradient(184.19deg, rgb(37, 1, 35) 50.01%, #000000 86.54%);
+  z-index: 1;
+}
+
+#blocks1 {
+  position: relative;
+  display: grid;
+  row-gap: 70px;
+  column-gap: 70px;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+
+  padding: 0 32px 32px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  max-width: 80%;
+  height: fit-content;
+}
+
+.go_href {
+  width: 80%;
+  max-width: 380px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px;
+  gap: 25px;
+  max-width: 380px;
+  width: calc(100% - 4px);
+  height: 538px;
+  max-height: 538px;
+  background: #000000;
+  border-radius: 30px;
+  border-width: 2px;
+  border-color: rgb(5, 204, 211);
+  border-style: solid;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.block:hover {
+  transform: scale(1.02);
+}
+
+.block_img {
+  gap: 10px;
+  height: 291px;
+  max-width: 290px;
+  width: 80%;
+
+  position: relative;
+  top: 34px;
+}
+
+.text_img {
+  max-width: 310px;
+  height: 52px;
+  width: 80%;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  padding-top: 25px;
+
+  text-align: center;
+
+  color: rgb(5, 204, 211);
+}
+
+.dropbtn,
+.dropdown-content a {
+  display: flex;
+  background-color: #000000;
+  color: rgb(5, 204, 211);
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  border: solid;
+  border-radius: 100px;
+  border-color: rgb(221, 15, 197);
+}
+
+.dropdown {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 60px;
+  z-index: 1;
+}
+
+.dropdown-content a:hover,
+.dropbtn:hover {
+  transform: scale(1.02);
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropbtn:focus~.dropdown-content,
+.dropbtn:active~.dropdown-content,
+.dropdown-content:hover {
+  top: -150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+:link {
+  text-decoration: 0;
+}
+
+
+/* .body_frame3 {
+
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  left: 0px;
+  top: 1668px;
+  padding-top: 80px;
+
+  background: #000000;
+  border-radius: 0px 0px 50px 50px;
+  z-index: 2;
+} */
+
+/* .body_frame4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 64px;
+  position: absolute;
+  width: 100%;
+  height: 1891px;
+  left: 0px;
+  top: 3131px;
+  background-color: #240233;
+} */
+
+/* .Ellipse13 {
+  background-color: #E7B400;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  left: 0px;
+  top: 0px;
+} */
+
+/* footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 35px 64px;
+  gap: 10px;
+  color: black;
+  font-size: xx-large;
+  justify-content: space-evenly;
+  position: relative;
+  max-width: 100%;
+  height: 100px;
+  bottom: 0;
+  margin-top: -50px;
+  background: #FFFFFF;
+  border-radius: 50px 50px 0px 0px;
+  z-index: 2;
+} */

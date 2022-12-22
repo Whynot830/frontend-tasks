@@ -1,0 +1,157 @@
+html {
+    font-size: 1.25rem;
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+* {
+    color: #444;
+}
+
+.white-round {
+    width: fit-content;
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 15px -10px black;
+}
+
+#contents {
+    padding: 10px 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#contents a {
+    text-decoration: none;
+}
+
+#pictures {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#pictures img {
+    cursor: pointer;
+    border: solid black 2px;
+    border-radius: 1.5rem;
+    width: 100px;
+    height: auto;
+}
+
+#picked {
+    display: flex;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 1rem;
+    border: solid 3px #DDD;
+    width: 300px;
+    height: 300px;
+}
+
+#ul {
+    list-style: none;
+}
+
+#ul li {
+    width: max-content;
+    cursor: pointer;
+}
+
+
+.selected {
+    background-color: #00000022;
+}
+
+#slider {
+    position: relative;
+    border-radius: 2rem;
+    background: #DDD;
+    width: 400px;
+    height: 1rem;
+}
+
+.thumb {
+    position: absolute;
+    left: 0;
+    top: -0.5rem;
+    cursor: pointer;
+    width: 1rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: #777;
+    transition: background-color 150ms
+}
+.thumb:hover {
+    background-color: #888;
+}
+.thumb:active {
+    background-color: #666;
+}
+
+#cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 190px;
+}
+
+.draggable {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    gap: 10px;
+    width: 40px;
+}
+
+.item {
+    box-sizing: border-box;
+    padding-top: 8px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    background-color: #DDD;
+    border-radius: 0.5rem;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.droppable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    background-color: lightgray;
+    transition: filter 150ms;
+}
+
+.anim {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+}
+
+#ball {
+    left: 25px;
+    position: relative;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #ccc;
+}

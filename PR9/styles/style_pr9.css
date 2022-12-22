@@ -1,0 +1,28 @@
+#btn {
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template:
+    "img text" 1fr / 2fr 3fr;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    --bg: white;
+    background-color: var(--bg);
+    box-shadow: #00000060 0px 0px 5px 1px;
+    transition: background-color 200ms;
+}
+
+#img {
+    grid-area: img;
+}
+
+#text {
+    grid-area: text;
+}
+
+#drawable_imgs {
+    width: 2.5rem;
+}

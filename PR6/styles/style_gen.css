@@ -1,0 +1,74 @@
+* {
+    font-family: 'Open Sans';
+    font-weight: bold;
+}
+
+.page-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.topbar_wrapper {
+    width: 100%;
+    background: #FFF;
+    box-shadow: 0px 4px 20px -10px #777;
+    height: 3rem;
+    min-height: 40px;
+    padding: 0 20px;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.topbar_row {
+    height: inherit;
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+div.row {
+    display: flex;
+    flex-direction: row;
+}
+
+div.column {
+    display: flex;
+    flex-direction: column;
+}
+
+div.centered {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.min_shdw {
+    box-shadow: 0px 10px 20px -18px black;
+}
+
+div.rounded {
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+div.gray {
+    background: #DDD;
+}
+
+a.goto, a.goto:visited {
+    text-decoration: none;
+    color: black;
+}

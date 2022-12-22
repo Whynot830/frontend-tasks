@@ -1,0 +1,146 @@
+@media (min-width: 320px) {
+    .container {
+        width: 60%;
+    }
+
+    .gallery {
+        gap: 10vw;
+    }
+
+    .gallery_item1,
+    .gallery_item2,
+    .gallery_item3 {
+        width: 45vw;
+        height: 45vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .notif_wrapper {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        gap: 5vw;
+    }
+
+    .gallery_item1,
+    .gallery_item2,
+    .gallery_item3 {
+        width: 20vw;
+        height: 20vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 80%;
+    }
+
+    .gallery_item1,
+    .gallery_item2,
+    .gallery_item3 {
+        width: 15vw;
+        height: 15vw;
+    }
+
+}
+
+.gallery {
+    box-sizing: border-box;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 20px;
+    width: 70%;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: rgba(120, 120, 120, 0.5);
+}
+
+.gallery img {
+    object-fit: cover;
+}
+
+.gallery_item1,
+.gallery_item2,
+.gallery_item3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgb(120, 110, 129);
+    border-radius: 10px;
+}
+
+.img {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    transition: 150ms;
+}
+
+.gallery_item1 {
+    overflow: hidden;
+}
+.gallery_item1::before {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -75%;
+    left: 0;
+    text-align: center;
+    padding-top: 20px;
+    content: 'M.2 SSD';
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    opacity: 0.9;
+    background-color: rgb(85, 78, 92);
+    transition: bottom 500ms, background-color 500ms;
+    color: #fff;
+}
+.gallery_item1:hover::before {
+    bottom: 0;
+    background-color: rgb(166, 151, 180);
+}
+
+
+.gallery_item2::before {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 80px;
+    content: 'M.2 SSD';
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 300ms;
+    background-color: rgb(85, 78, 92);
+    color: #fff;
+}
+.gallery_item2:hover::before {
+    opacity: 0.9;
+}
+
+
+.gallery_item3::before {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 1.2rem;
+    width: 100%;
+    content: "M.2 SSD";
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+.gallery_item3:hover .img {
+    transform: translateY(-30px) scale(0.95);
+}
+.gallery_item3:hover::before {
+    opacity: 1;
+}

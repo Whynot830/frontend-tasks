@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_pr4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
+    <title>PR4</title>
+</head>
+
+
+<body class="nomargin" style="background-color: #EEE; min-width: 500px">
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="forms">
+                <div class="centered gray rounded min_shdw">
+                    <form>
+                        <div style="display: flex; flex-flow: column nowrap; align-items: flex-start;">
+                            <div class="form">
+                                <label for="name">
+                                    ФИО:
+                                    <input id="name" type="text" placeholder="Иванов Иван Иванович" required>
+                                </label>
+                            </div>
+
+
+                            <div class="form">
+                                <label>Дата рождения:</label>
+                                <input style="cursor: text" type="datetime-local">
+                            </div>
+
+                            <div class="form" style="display:flex">
+                                <span style="margin-right: 20px">Фото:</span>
+                                <label class="label_file" for="fl">
+                                    <img src="svgs/paperclip.svg" style="width:2rem">
+                                    <span>Загрузите файл</span>
+                                    <input id="fl" type="file">
+                                </label>
+                            </div>
+
+                            <div style="display: flex; align-items:baseline;">
+                                <label for="about">
+                                    О себе:
+                                </label>
+                                <textarea id="about" placeholder="Расскажите что-нибудь о себе" cols="15" rows="10"
+                                    minlength="1" maxlength="500" required></textarea>
+                            </div>
+                            <div class="form">
+                                <label for="">
+                                    Номер телефона:
+                                </label>
+                                <input type="tel" placeholder="+7 (000) 000-00-00" required>
+                            </div>
+                            <div class="form">
+                                <p style="margin: 0">Пол:</p>
+                                <ul type="none" style="padding: 0; margin: 0">
+                                    <li><input checked type="radio" name="sex" required>
+                                        <label for="">М</label>
+                                    </li>
+                                    <li><input type="radio" name="sex">
+                                        <label for="">Ж</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="sex" disabled>
+                                        <label for="">Другой</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="submit" class="btn" style="width: fit-content;">
+                                Зарегистрироваться
+                            </button>
+                            <button type="reset" class="btn">
+                                Сброс введенных данных
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="centered gray rounded min_shdw" style="padding: 15px">
+                    <div>
+                        <form>
+                            <fieldset style="border: none; padding:0">
+                                <legend style="margin: 0.7rem 0">Выбор языков программирования:</legend>
+                                <input type="checkbox" name="skill">C
+                                <input type="checkbox" name="skill">C++
+                                <input type="checkbox" name="skill">Java
+                                <input type="checkbox" name="skill">HTML&CSS
+                                <input type="checkbox" name="skill">Python
+                            </fieldset>
+
+                            <div class="form">
+                                <span>Опыт работы (лет):</span>
+                                <input type="number" min="0" max="20" style="width:80px" value="0">
+                            </div>
+                            <div class="form">
+                                <span style="margin-right: 10px">Желание работать:</span>
+                                <input class="custom_slider" style="width:80px" type="range" min="0" max="100"
+                                    value="0">
+                            </div>
+
+                            <div class="form" style="width: fit-content; margin-bottom: 1rem;">
+                                <span style="margin-right: 10px">
+                                    Желаемая зарплата:
+                                </span>
+                                <div class="select">
+                                    <select>
+                                        <option value="">&lt 1 000 $</option>
+                                        <option value="">1 000$ - 3 000 $</option>
+                                        <option value="">> 3 000 $</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button class="btn" type="submit">Подать заявку</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="centered gray rounded min_shdw">
+                    <form>
+                        <label for="email">
+                            e-mail:
+                        </label>
+                        <input type="email" placeholder="example@gmail.com">
+
+                        <label for="">
+                            Пароль:
+                        </label>
+                        <input type="password">
+                        <button class="btn">Войти</button>
+                    </form>
+                </div>
+
+                <div class="centered gray rounded min_shdw" style="width:600px; height:400px">
+                    <iframe style="border-radius:30px" src="blank.html" width="100%" height="100%"></iframe>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

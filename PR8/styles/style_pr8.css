@@ -1,0 +1,391 @@
+* {
+    font-family: 'Open Sans';
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.grid_wrapper {
+    display: grid;
+    justify-content: center;
+    place-items: stretch;
+    height: 100vh;
+}
+
+.topbar,
+.footer,
+.sidebar,
+.navbar,
+.ads {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    border: solid gray;
+}
+
+.navbar {
+    background: lavender;
+    grid-area: navbar;
+}
+
+.topbar {
+    background: white;
+    grid-area: header;
+}
+
+.grid_content {
+    background: azure;
+    grid-area: content;
+}
+
+.sidebar {
+    background: beige;
+    grid-area: sidebar;
+}
+
+.ads {
+    background: honeydew;
+    grid-area: ads;
+}
+
+.footer {
+    background: lightcyan;
+    grid-area: footer;
+}
+
+
+.grid_content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    place-items: stretch;
+    width: 100%;
+    height: 100%;
+    border: solid gray;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.content_item {
+    user-select: none;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #beb2ff;
+    border: 4px #9b91d6 outset;
+    border-radius: 1rem;
+    transition: 200ms;
+}
+
+.content_item:hover,
+.content_item:has(.login_item:focus) {
+    background: #9c90dd;
+}
+
+
+.content_item:last-child {
+    grid-column: 3 / span 2;
+}
+
+.content_item:nth-child(2) {
+    grid-row: 1 / span 2;
+    grid-column: 4;
+}
+
+.content_item:nth-child(2) {
+    grid-row: 1 / span 2;
+    grid-column: 4;
+}
+
+.content_item:nth-child(4) {
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 2;
+}
+
+@media (min-width: 320px) {
+    .grid_wrapper {
+        grid-template:
+            "header" 1fr
+            "navbar" 1fr
+            "content" 70%
+            "sidebar" 1fr
+            "ads" 1fr
+            "footer" min-content / 1fr;
+    }
+
+    .login {
+        text-align: center;
+        grid-auto-rows: 2rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .content_item img {
+        width: 3rem;
+    }
+
+    .login * {
+        font-size: 0.8rem;
+    }
+
+    .login h1 {
+        font-size: 1rem;
+    }
+
+    input.login_item::placeholder {
+        color: #ffffff99;
+    }
+
+    .input_div label {
+        display: none;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-auto-rows: max-content;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .grid_wrapper {
+        grid-template:
+            "header header" 1fr
+            "navbar navbar" 1fr 
+            "sidebar content" 70%
+            "ads footer" min-content / 10% 90%;
+    }
+
+    .content_item img {
+        width: 5rem !important;
+    }
+
+    .login {
+        padding-top: 5rem;
+        text-align: start;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .login * {
+        font-size: 1rem;
+    }
+
+    .login h1 {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        font-size: 1.5rem;
+    }
+
+    span.login_item {
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-rows: 3rem;
+    }
+
+    .footer ul:nth-child(3) {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid_wrapper {
+        grid-template-columns: 10% 80% 10%;
+        grid-template-areas:
+            "header header header"
+            "sidebar navbar ads"
+            "sidebar content ads"
+            "footer footer footer";
+    }
+
+    input.login_item {
+        height: 3px;
+    }
+
+    input.login_item:not(:focus) {
+        pointer-events: none;
+    }
+
+    input.login_item::placeholder {
+        color: transparent;
+    }
+
+    .input_div label {
+        display: inline;
+        cursor: text;
+        position: relative;
+        bottom: 0;
+        transition: 200ms;
+    }
+
+    input.login_item:focus~label {
+        cursor: default;
+        bottom: 2rem;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-auto-rows: 3rem;
+    }
+
+    .footer ul:nth-child(3) {
+        grid-column: unset;
+    }
+}
+
+.login {
+    position: relative;
+    box-sizing: border-box;
+    display: grid;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login h1 {
+    color: #000000cc;
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+.login_item {
+    position: relative;
+    height: 100%;
+    transition: 200ms;
+    color: #ffffff99;
+}
+
+input.login_item {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    min-width: 80px;
+    outline: none;
+    background: #00000033;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 0px 15px -5px black;
+}
+
+input.login_item:focus {
+    background: #00000055;
+    height: 100%;
+}
+
+.input_div {
+    text-align: center;
+}
+
+span.login_item {
+    color: #000000bb;
+}
+
+span.login_item:hover {
+    color: #00000099;
+}
+
+span.login_item:active {
+    color: #000000dd;
+}
+
+.login_item.btn {
+    justify-self: center;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000033;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 15px -5px black;
+}
+
+.login_item.btn:hover {
+    background: #00000055;
+}
+
+.login_item.btn:active {
+    background: #00000077;
+}
+
+.footer {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.footer span {
+    position: relative;
+    left: 35%;
+    text-align: start;
+}
+
+.footer h1 {
+    position: relative;
+    left: 35%;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.footer h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-radius: 2rem;
+    width: 3rem;
+    height: 3px;
+    background-color: black;
+    transition: 200ms;
+}
+
+.footer h1:hover::after {
+    width: 4rem;
+}
+
+.footer ul {
+    position: relative;
+    left: -2rem;
+    padding-top: 0.5rem;
+    padding-left: 0;
+    list-style: none;
+    margin: 0
+}
+
+.footer ul li {
+    margin: 0.5rem 0;
+}
+
+span img {
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+
+.links {
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.links:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+.links:active {
+    color: black;
+}
